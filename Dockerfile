@@ -2,7 +2,8 @@
 
 # Smallest base image
 FROM alpine:latest
-
+ARG TARGETPLATFORM
+RUN echo "I'm building for $TARGETPLATFORM"
 LABEL maintainer="Kyle Manna <kyle@kylemanna.com>"
 
 # Testing: pamtester
