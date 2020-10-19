@@ -1,4 +1,4 @@
-name: build and push multi-arch image
+name: build and push multiarch image
 
 on:
   push:
