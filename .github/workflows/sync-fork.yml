@@ -22,6 +22,11 @@ jobs:
         with:
           upstream_repository: kylemanna/docker-openvpn.git
           upstream_branch: master
+          git_pull_args: --ff-only
+
+      - name: Check for new commits
+        if: steps.sync.outputs.has-new-commits
+        run: echo "There were new commits."
 
       - name: Timestamp
         run: date
