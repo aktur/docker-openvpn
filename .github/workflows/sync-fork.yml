@@ -20,7 +20,7 @@ jobs:
         id: sync
         uses: aormsby/Fork-Sync-With-Upstream-action@v2.0
         with:
-          upstream_repository: kylemanna/docker-openvpn.git
+          upstream_repository: kylemanna/docker-openvpn
           upstream_branch: master
           git_pull_args: --ff-only
 
