@@ -1,0 +1,25 @@
+on:
+  schedule:
+    - cron: "30 7 * * 1,4"
+    # scheduled at 07:30 every Monday and Thursday
+
+jobs:
+  sync_with_upstream:
+    runs-on: ubuntu-latest
+    name: Sync master with upstream latest
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Pull upstream changes
+        id: sync
+        uses: aormsby/Fork-Sync-With-Upstream-action@v1
+        with:
+          upstream_repository: kylemanna/docker-openvpn.git
+          upstream_branch: master
+
+      - name: Timestamp
+        run: date
