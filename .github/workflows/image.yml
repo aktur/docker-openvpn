@@ -12,16 +12,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+        with:
+          platforms: all
       - name: install buildx
         id: buildx
-        uses: crazy-max/ghaction-docker-buildx@v1 # docker/setup-buildx-action@v1 # docker does not supprt arm :-(
+        uses: docker/setup-buildx-action@v1
         with:
           buildx-version: latest
+          install: true # set default builder
       - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
       - name: login to docker hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
       - name: build and push images
         run: |
-          docker buildx build --push --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 --tag aktur/openvpn .
+          docker build --push --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 --tag aktur/openvpn .
           echo 'All done :-)'
