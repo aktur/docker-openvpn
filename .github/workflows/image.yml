@@ -1,4 +1,5 @@
 name: build and push multiarch image
+# based on https://www.docker.com/blog/multi-arch-build-and-images-the-simple-way/
 
 on:
   push:
@@ -15,7 +16,7 @@ jobs:
         id: buildx
         uses: crazy-max/ghaction-docker-buildx@v1 # docker/setup-buildx-action@v1 # docker does not supprt arm :-(
         with:
-          builldx-version: latest
+          buildx-version: latest
       - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
       - name: login to docker hub
