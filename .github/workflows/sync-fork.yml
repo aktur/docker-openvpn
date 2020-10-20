@@ -2,8 +2,7 @@ name: sync with forked repo
 
 on:
   schedule:
-    - cron: "30 7 * * 1,4"
-    # scheduled at 07:30 every Monday and Thursday
+    - cron: "30 7 * * 1,3,5"
 
 jobs:
   sync_with_upstream:
