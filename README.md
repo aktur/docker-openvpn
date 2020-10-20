@@ -1,10 +1,9 @@
 # OpenVPN for Docker
 
-[![Build Status](https://travis-ci.org/kylemanna/docker-openvpn.svg)](https://travis-ci.org/kylemanna/docker-openvpn)
-[![Docker Stars](https://img.shields.io/docker/stars/kylemanna/openvpn.svg)](https://hub.docker.com/r/kylemanna/openvpn/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/kylemanna/openvpn.svg)](https://hub.docker.com/r/kylemanna/openvpn/)
-[![ImageLayers](https://images.microbadger.com/badges/image/kylemanna/openvpn.svg)](https://microbadger.com/#/images/kylemanna/openvpn)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkylemanna%2Fdocker-openvpn.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkylemanna%2Fdocker-openvpn?ref=badge_shield)
+![build and push multiarch image](https://github.com/aktur/docker-openvpn/workflows/build%20and%20push%20multiarch%20image/badge.svg)
+[![Docker Stars](https://img.shields.io/docker/stars/aktur/openvpn.svg)](https://hub.docker.com/r/aktur/openvpn/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/aktur/openvpn.svg)](https://hub.docker.com/r/aktur/openvpn)
+![sync with forked repo](https://github.com/aktur/docker-openvpn/workflows/sync%20with%20forked%20repo/badge.svg)
 
 
 OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
@@ -12,7 +11,7 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 Extensively tested on [Digital Ocean $5/mo node](http://bit.ly/1C7cKr3) and has
 a corresponding [Digital Ocean Community Tutorial](http://bit.ly/1AGUZkq).
 
-Tested on AWS t4g.nano instance (< 4$/mo on demand ~1$/mo spot) and t4g.micro (free tier till 31.12.2020).
+**Tested on AWS ARM t4g.nano instance (< 4$/mo on demand ~1$/mo spot) and t4g.micro (free tier till 31.12.2020).**
 
 #### Upstream Links
 
