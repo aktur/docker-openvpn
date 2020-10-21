@@ -2,7 +2,7 @@ name: sync with forked repo
 
 on:
   schedule:
-    - cron: "15 8 * * 1,3,5"
+    - cron: "30 9 * * 1,3,5"
 
 jobs:
   sync_with_upstream:
@@ -30,11 +30,12 @@ jobs:
 
       - name: do it old way
         run: |
-          git remote add upstream https://github.com/kylemanna/docker-openvpn.git
+          git remote add upstream https://github.com/kylemanna/docker-openvpn
+          git remote -v
           git fetch upstream
           git checkout master
           git merge upstream/master
-          git push
+          git push origin master
 
       - name: Timestamp
         run: date
