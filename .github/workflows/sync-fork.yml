@@ -2,7 +2,7 @@ name: sync with forked repo
 
 on:
   schedule:
-    - cron: "30 7 * * 1,3,5"
+    - cron: "55 7 * * 1,3,5"
 
 jobs:
   sync_with_upstream:
@@ -21,6 +21,7 @@ jobs:
         with:
           upstream_repository: kylemanna/docker-openvpn
           upstream_branch: master
+          target_branch: master
           git_pull_args: --ff-only
 
       - name: Check for new commits
