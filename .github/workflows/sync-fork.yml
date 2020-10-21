@@ -2,7 +2,7 @@ name: sync with forked repo
 
 on:
   schedule:
-    - cron: "30 9 * * 1,3,5"
+    - cron: "50 9 * * 1,3,5"
 
 jobs:
   sync_with_upstream:
@@ -34,7 +34,7 @@ jobs:
           git remote -v
           git fetch upstream
           git checkout master
-          git merge upstream/master
+          git merge upstream/master --allow-unrelated-histories
           git push origin master
 
       - name: Timestamp
