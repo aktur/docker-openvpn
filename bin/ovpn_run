@@ -103,5 +103,13 @@ if [ $? = 0 ]; then
     sysctl -w net.ipv6.conf.all.forwarding=1 || echo "Failed to enable IPv6 Forwarding"
 fi
 
+if [ $OVPN_DEVICE == "tap" ]; then
+    if [ -f bridge-start ]; then
+        echo "Setup ethernet bridge..."
+        ./bridge-start
+        echo "Setup ethernet done!!!"
+    fi
+fi
+
 echo "Running 'openvpn ${ARGS[@]} ${USER_ARGS[@]}'"
 exec openvpn ${ARGS[@]} ${USER_ARGS[@]}
