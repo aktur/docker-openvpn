@@ -3,7 +3,7 @@
 ![build and push multiarch image](https://github.com/aktur/docker-openvpn/workflows/build%20and%20push%20multiarch%20image/badge.svg)
 [![Docker Stars](https://img.shields.io/docker/stars/aktur/openvpn.svg)](https://hub.docker.com/r/aktur/openvpn/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/aktur/openvpn.svg)](https://hub.docker.com/r/aktur/openvpn)
-![sync with forked repo](https://github.com/aktur/docker-openvpn/workflows/sync%20with%20forked%20repo/badge.svg)
+[![Donate](https://img.shields.io/badge/donations-appreciated-green.svg)](https://www.paypal.com/webapps/shoppingcart?flowlogging_id=4b5432e8ad1a8&mfid=1616517920020_4b5432e8ad1a8#/checkout/openButton)
 
 
 OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
